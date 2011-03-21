@@ -1,10 +1,12 @@
 require 'redmine'
 
-Redmine::Plugin.register :redmine_las_weekend do
-  name 'Redmine Las Weekend plugin'
-  author 'Author name'
-  description 'This is a plugin for Redmine'
-  version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+Redmine::Plugin.register :chiliproject_las_weekend do
+  name 'LAS Weekend'
+  author 'Eric Davis'
+  url "https://projects.littlestreamsoftware.com/"
+  author_url 'http://www.littlestreamsoftware.com'
+  description 'LAS Weekend'
+  version '0.1.0'
+
+  requires_redmine :version_or_higher => '1.0.0'
 end
