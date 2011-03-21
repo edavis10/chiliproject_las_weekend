@@ -14,6 +14,8 @@ end
 
 module ChiliProjectIntegrationTestHelper
   def login_as(user="existing", password="existing")
+    visit "/logout" # Make sure the session is cleared
+
     visit "/login"
     fill_in 'Login', :with => user
     fill_in 'Password', :with => password
