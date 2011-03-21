@@ -26,9 +26,24 @@ class TravelRequestsTest < ActionController::IntegrationTest
   end
 
   context "logged in as a normal user (not parent or child)" do
-    should "see a top menu item for 'My Page'"
-    should "not see a top menu item for 'My Travel Requests'"
-    should "not see a top menu item for 'My Students' Requests'"
+    setup do
+      @user = User.generate!(:password => 'test', :password_confirmation => 'test')
+      login_as(@user.login, 'test')
+      visit_home
+    end
+    
+    should "see a top menu item for 'My Page'" do
+      assert find("#top-menu li a", :text => "My page")
+    end
+    
+    should "not see a top menu item for 'My Travel Requests'" do
+      assert has_no_content?("My Travel Requests")
+    end
+    
+    should "not see a top menu item for 'My Students' Requests'" do
+      assert has_no_content?("My Students' Requests")
+    end
+    
   end
   
 end
