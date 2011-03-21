@@ -1,10 +1,8 @@
-= chiliproject_las_weekend
-
-LAS Weekend
+= LAS Weekend
 
 == Features
 
-TODO: fill in features
+* My Travel Requests - show issues authored by the child (Parent and Child accounts only)
 
 == Getting the plugin
 
@@ -15,10 +13,6 @@ Download from {GitHub}[http://github.com/edavis10/chiliproject_las_weekend].
 1. Follow the Redmine plugin installation steps at: http://www.redmine.org/wiki/redmine/Plugins 
 2. Run the plugin migrations +rake db:migrate_plugins+
 3. Restart your Redmine web servers (e.g. mongrel, thin, mod_rails)
-
-== Usage
-
-TODO: Add usage
 
 == License
 
