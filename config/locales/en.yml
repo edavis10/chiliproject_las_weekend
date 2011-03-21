@@ -1,3 +1,3 @@
-# English strings go here for Rails i18n
 en:
-  my_label: "My label"
+  text_my_travel_requests: "My Travel Requests"
+  text_my_students_travel: "My Students' Travel"

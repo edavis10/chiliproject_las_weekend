@@ -12,7 +12,10 @@ class TravelRequestsTest < ActionController::IntegrationTest
       visit_home
     end
     
-    should "see a top menu item for 'My Travel Requests'"
+    should "see a top menu item for 'My Travel Requests'" do
+      assert find("#top-menu li a", :text => "My Travel Requests")
+    end
+    
     should "not see a top menu item for 'My Page'" do
       assert has_no_content?("My page")
     end
@@ -31,7 +34,10 @@ class TravelRequestsTest < ActionController::IntegrationTest
       visit_home
     end
 
-    should "see a top menu item for 'My Students' Travel'"
+    should "see a top menu item for 'My Students' Travel'" do
+      assert find("#top-menu li a", :text => "My Students' Travel")
+    end
+
     should "not see a top menu item for 'My Page'" do
       assert has_no_content?("My page")
     end
